@@ -1,0 +1,7 @@
+interface:
+  display_name: "OpenAIプロンプト評価・改善"
+  short_description: "OpenAI用プロンプトを10観点で評価・改善する"
+  default_prompt: "$prompt-eval-improver を使って、私のOpenAIプロンプトを10項目×10点で評価し、改善版と改善理由を提案してください。"
+
+policy:
+  allow_implicit_invocation: true
