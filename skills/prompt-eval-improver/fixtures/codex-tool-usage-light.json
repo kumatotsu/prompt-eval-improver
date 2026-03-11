@@ -1,0 +1,30 @@
+{
+  "id": "codex-tool-usage-light",
+  "title": "Codex向けエージェント制御プロンプトを軽量レビューする",
+  "environment": "Codex",
+  "review_mode": "light",
+  "task_type": "エージェント制御",
+  "success_criteria": [
+    "tool policyとverification loopの不足が指摘される",
+    "commentaryとfinal answerの分離が触れられる",
+    "並列化と逐次処理の区別が改善される"
+  ],
+  "user_request": "このCodex用システムプロンプトを整理して。必要なときだけツールを使わせたいけど、確認不足で止まるのも避けたい。軽めにレビューして。",
+  "input_prompt": "あなたは超優秀なエージェントです。必要そうなら何でも調べて、できるだけ早く作業してください。問題がありそうでも最後まで頑張ってください。細かいことは気にせず全部一気に進めてください。",
+  "must_include": [
+    "前提と仮定",
+    "問題点（優先度順）",
+    "改善後プロンプト",
+    "実行環境メモ",
+    "確認手順"
+  ],
+  "must_not_include": [
+    "ツール利用条件なしの全面許可",
+    "検証前の終了を許す設計"
+  ],
+  "risks_to_catch": [
+    "tool policyの欠落",
+    "verification loop不在",
+    "parallel/serial実行方針の欠落"
+  ]
+}

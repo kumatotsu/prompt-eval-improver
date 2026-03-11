@@ -1,7 +1,7 @@
 interface:
-  display_name: "OpenAIプロンプト評価・改善"
-  short_description: "OpenAI用プロンプトを10観点で評価・改善する"
-  default_prompt: "$prompt-eval-improver を使って、私のOpenAIプロンプトを10項目×10点で評価し、改善版と改善理由を提案してください。"
+  display_name: "OpenAI Prompt Reviewer"
+  short_description: "GPT-5.4 時代の OpenAI プロンプトを環境別にレビュー・改善する"
+  default_prompt: "$prompt-eval-improver を使って、この OpenAI プロンプトをレビューし、実行環境に合う改善版・差分・検証観点を提案してください。必要なら詳細採点も付けてください。"
 
 policy:
   allow_implicit_invocation: true

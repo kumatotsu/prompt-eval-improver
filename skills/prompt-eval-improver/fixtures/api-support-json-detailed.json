@@ -1,0 +1,32 @@
+{
+  "id": "api-support-json-detailed",
+  "title": "OpenAI API向けのサポート分類プロンプトを詳細レビューする",
+  "environment": "OpenAI API",
+  "review_mode": "detailed",
+  "task_type": "分類",
+  "success_criteria": [
+    "JSON出力契約が明確になる",
+    "systemとuserの責務分離またはprompt object案が示される",
+    "最小eval案が付く"
+  ],
+  "user_request": "このAPI用プロンプトをGPT-5.4向けに見直して。JSONの安定性が最重要なので、詳細レビューと評価もほしい。",
+  "input_prompt": "Support ticket を見て category と priority を返してください。できるだけ正確に分類し、必要なら理由も詳しく返してください。",
+  "must_include": [
+    "前提・仮定",
+    "現行プロンプトの問題点",
+    "改善後プロンプト（コピペ可能）",
+    "実行環境別の実装メモ",
+    "API向け prompt object 案",
+    "評価レポート（観点別）",
+    "最小 eval 案"
+  ],
+  "must_not_include": [
+    "ChatGPT会話専用の説明だけで終わること",
+    "理由文を必須JSON外へ曖昧に逃がすこと"
+  ],
+  "risks_to_catch": [
+    "出力スキーマの曖昧さ",
+    "欠損入力時の扱い不足",
+    "評価観点と合格条件の欠落"
+  ]
+}
